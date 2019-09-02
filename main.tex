@@ -1,14 +1,64 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+%% Problems:
+%% Special characters in the bibliography mostly work fine. However, for example, Bo{\v{s}}kovi{\'c}, {\v{Z}}eljko produces not the correct output (the entries are bovskovic2005locality and bovskovic2005left)
 
-\title{Bross 256}
-\author{sebastian.nordhoff }
-\date{September 2019}
+%% The entry jackendoff1977x produced not the desired result; there should be a bar on the top of the X (I also tried $\overline{X}$, but this doesn't work).
 
-\begin{document}
+%% The line: 
+%% \begin{theo}[A Note on \textsc{finish}, \textsc{through} and Perfective Aspect]\label{exkursfertigdurch}
+%% does not produce small caps :( Maybe you can help :* :*
 
-\maketitle
+%% Example {bsp:advadvadvorderitalfrench} is very small; do you have an idea to make it more readable? :)
 
-\section{Introduction}
+\documentclass[output=book,nonflat,modfonts
+colorlinks,citecolor=brown,,
+%  draft,draftmode,  
+		  ]{langsci/langscibook}    
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%          additional packages                 %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\input{localmetadata.tex} 
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\addbibresource{localbibliography.bib}
 
-\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%             Frontmatter                      %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{document} 
+\input{localcommands.tex} 
+\maketitle   %create title page              
+\frontmatter 
+
+\currentpdfbookmark{Contents}{name} % adds a PDF bookmark
+{\sloppy\tableofcontents}
+
+% \include{chapters/dedication} %dedication goes to localmetadata.tex
+\include{chapters/preface}
+\include{chapters/acknowledgments}
+\include{chapters/abbreviations} 
+% \include{chapters/notation} 
+
+
+\mainmatter     
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%             Chapters                         %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \include{chapters/00}
+\include{chapters/01}
+\include{chapters/02}
+\include{chapters/03}
+\include{chapters/04}
+\include{chapters/05}
+\include{chapters/06}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%             Backmatter                       %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \input{localseealso.tex} 
+% There is normally no need to change the backmatter section
+\sloppy
+\input{backmatter.tex} 
+\end{document} 
