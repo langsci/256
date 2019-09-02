@@ -18,8 +18,8 @@
 \usepackage{pifont}% http://ctan.org/pkg/pifont
 \newcommand{\cmark}{\ding{51}}% \cmark
 \newcommand{\xmark}{\ding{55}}%
-
-% \usepackage{bold-extra}
+% 
+% % \usepackage{bold-extra}
 \usepackage{multicol}
 \usepackage{tikz} % for tikz trees
 \usepackage{tikz-qtree} % for tikz trees
@@ -28,13 +28,15 @@
 
 \newboxedtheorem[small box style={fill=blue!20,draw=black, rounded corners},
 big box style={fill=blue!10,draw=orange,thick,rounded corners},
-headfont=\bfseries]%
-{proposition}{Proposition}{somecounter}
+headfont=\itshape %%this package is very ugly, as it defines the header fonts beyond its own scope
+]%
+{proposition}{PropositionFIXME}{somecounter}
 
 \newbreakabletheorem[small box style={fill=black!20, draw=black, line width=.7pt, rounded corners},
 big box style={fill=white,draw=black,thick,rounded corners},
-headfont=\bfseries]%
-{theo}{Excursus:\hspace{-0.16cm}}{}
+headfont=\itshape %%this package is very ugly, as it defines the header fonts beyond its own scope
+]%
+{theo}{ExcursusFIXME:\hspace{-0.16cm}}{}
 
 %\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} % 
 
@@ -42,7 +44,7 @@ headfont=\bfseries]%
 \usepackage{adjustbox}
 \usepackage{footnotehyper} 
 \makesavenoteenv{tabular}
-
+% 
 \usepackage{enumitem} % Abstände zwischen Aufzählungen verringern
 \usepackage{colortbl} %Für bunte Tabellen
 \usepackage{color} %Für bunte Tabellen
@@ -51,9 +53,9 @@ headfont=\bfseries]%
 % \setlength{\tabcolsep}{5pt}%Abstand zwischen den Spalten einer Tabelle
 % \renewcommand{\arraystretch}{1.1}%Abstand zwischen den Zeilen einer Tabelle
 \usepackage{amsfonts} % for the pragmatic inference marker \leadsto
-
- \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Tabel Tabelle left-aligned ohne L\"ocher
- 
+% 
+%  \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Tabel Tabelle left-aligned ohne L\"ocher
+%  
 
 
 % \usepackage{tipa}
