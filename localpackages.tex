@@ -24,19 +24,49 @@
 \usepackage{tikz} % for tikz trees
 \usepackage{tikz-qtree} % for tikz trees
 \usetikzlibrary{arrows} % for number lines / Zahlenstrahl
-\usepackage{xeboiboites} %hübscheboxenfrürexkurse mit Seitenumbruch
 
-\newboxedtheorem[small box style={fill=blue!20,draw=black, rounded corners},
-big box style={fill=blue!10,draw=orange,thick,rounded corners},
-headfont=\itshape %%this package is very ugly, as it defines the header fonts beyond its own scope
-]%
-{proposition}{PropositionFIXME}{somecounter}
+%%%%%%%%%%SIDE NOTES%%%%%%%%%%
+\usepackage{cleveref}
+\usepackage[most]{tcolorbox}
+\newtcbtheorem[number within=chapter]{Theorem}{}{
+        enhanced,
+        breakable,
+        sharp corners,
+        attach boxed title to top left={
+            xshift=-1mm,
+            yshift=-5mm,
+            yshifttext=-1mm
+        },
+        top=1.5em,
+        colback=white,
+        colframe=black!75!black,
+        fonttitle=\bfseries,
+        boxed title style={
+            sharp corners,
+            size=small,
+            colback=black!75!black,
+            colframe=black!75!black,
+        } 
+    }{thm}
+		
+\newenvironment{digression}[2]{ \begin{Theorem}[adjusted title=\textbf{Side note \thetcbcounter:} #1]{}{#2} 
+   }{\end{Theorem}}
+%%%%%%%%%%SIDE NOTES%%%%%%%%%%
 
-\newbreakabletheorem[small box style={fill=black!20, draw=black, line width=.7pt, rounded corners},
-big box style={fill=white,draw=black,thick,rounded corners},
-headfont=\itshape %%this package is very ugly, as it defines the header fonts beyond its own scope
-]%
-{theo}{ExcursusFIXME:\hspace{-0.16cm}}{}
+
+%\usepackage{xeboiboites} %hübscheboxenfrürexkurse mit Seitenumbruch
+
+%\newboxedtheorem[small box style={fill=blue!20,draw=black, rounded corners},
+%big box style={fill=blue!10,draw=orange,thick,rounded corners},
+%headfont=\itshape %%this package is very ugly, as it defines the header fonts beyond its own scope
+%]%
+%{proposition}{PropositionFIXME}{somecounter}
+
+%\newbreakabletheorem[small box style={fill=black!20, draw=black, line width=.7pt, rounded corners},
+%big box style={fill=white,draw=black,thick,rounded corners},
+%headfont=\itshape %%this package is very ugly, as it defines the header fonts beyond its own scope
+%]%
+%{theo}{ExcursusFIXME:\hspace{-0.16cm}}{}
 
 %\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} % 
 
