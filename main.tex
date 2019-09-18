@@ -4,7 +4,7 @@
 
 %% Example {bsp:advadvadvorderitalfrench} is very small; do you have an idea to make it more readable? :)
 
-\documentclass[output=book,nonflat,modfonts
+\documentclass[output=book,nonflat,modfonts,
 colorlinks,citecolor=brown,,
 %  draft,draftmode,  
 		  ]{langsci/langscibook}    
@@ -29,33 +29,27 @@ colorlinks,citecolor=brown,,
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
 {\sloppy\tableofcontents}
 
-%\include{chapters/dedication} %dedication goes to localmetadata.tex
-%\include{chapters/preface}
-%\include{chapters/acknowledgments}
-%\include{chapters/abbreviations} 
-%\include{chapters/notation} 
+\include{chapters/dedication} %dedication goes to localmetadata.tex
+\include{chapters/preface}
+\include{chapters/acknowledgments}
+\include{chapters/abbreviations} 
+\include{chapters/notation} 
 
 
 \mainmatter     
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%             Chapters                         %%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%             Chapters                         %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+ 
 
-
-
-%%%%%%The content of chapters/00 can be ignored
-% \include{chapters/00}
-%%%%%%The content of chapters/00 can be ignored
-
-
-%\include{chapters/01}
-%\include{chapters/02}
+\include{chapters/01}
+\include{chapters/02}
 \include{chapters/03}
-%\include{chapters/04}
-%\include{chapters/05}
-%\include{chapters/06}
+\include{chapters/04}
+\include{chapters/05}
+\include{chapters/06}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Backmatter                       %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
