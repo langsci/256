@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[4] Config.pm:307> INFO - Logfile is 'proposal_bross.blg'
+[47] biber-MSWIN32:315> INFO - === 
+[678] Utils.pm:209> ERROR - Cannot find control file 'proposal_bross.bcf'! - Did latex run successfully on your .tex file before you ran biber?
+[678] Biber.pm:114> INFO - ERRORS: 1
