@@ -35,7 +35,7 @@ This development did not come out of nowhere, but was the result of two competin
 
 \begin{figure}[bt]
 \centering
-	\includegraphics[width=1.0\textwidth]{modelsw.jpg}
+	\includegraphics[width=1.0\textwidth]{model}
 	\caption{a) The modular view of language (L) as being an encapsulated and innate module that is separated from general cognition (G); b) Proponents of embodied cognition approaches think of language not as an innate module, but rather as a processing system that draws on general cognitive resources; c) An integrated view.}
 	\label{model}
 \end{figure}
@@ -464,7 +464,7 @@ The lower/narrower the scope of an operator is, the more likely it will be expre
 
 \begin{figure}[bt]
 \centering
-	\includegraphics[width=1.0\textwidth]{hyposw.jpg}
+	\includegraphics[width=1.0\textwidth]{hypo}
 	\caption{The main hypotheses by \citet{bross2017scope}: Scope is directly mapped onto the signer's body (called the \is{bodily-mapping hypothesis}bodily-mapping hypothesis). The higher the scope, the likelier it is that a category will be expressed via layering and the higher the scope, the higher the articulator. At some point in the syntactic tree, scopal relations are expressed via concatenation, first from left to right, then switching to right to left. The two concatenation strategies are metaphorically depicted as the left and the right hand -- although `left' and `right' refer to the relative sequencing of manual signs in time and not to the left or right hand.}
 	\label{hypo}
 \end{figure}	
@@ -551,7 +551,47 @@ Aspectual categories below the VoiceP (the so-called `inner aspects')\is{inner a
 
 The tree depicts the assumption that the higher categories will be expressed by way of layering, while the higher, IP-internal aspectual categories (called `outer aspects') find manual expression and the lower aspectual categories (the `inner aspects')\is{inner aspect}, located below VoiceP find their expression by modulating the movement path of the verb sign (probably, the verb moves into the corresponding aspectual projection in the case of inner aspect). 
 
-\begin{figure}
+\begin{figure}\footnotesize
 \caption{\color{red}Please provide a caption\label{treeovervies}}
-            \includegraphics[width=0.7\linewidth]{treesw.jpg}
+% % %             \includegraphics[width=0.7\linewidth]{treesw.jpg}
+\begin{forest} for tree={calign=fixed angles,s sep=5ex}
+[CP
+ [\phantom{C}] [$\overline{\textrm{C}}$
+  [IP
+   [\phantom{I}] [$\overline{\textrm{I}}$, s sep=10ex
+    [HabitualP
+     [\phantom{C}] [$\overline{\textrm{Habitual}}$,s sep=5ex,name=habitualbar
+       [VoiceP, edge=dotted
+        [DP\\\textsc{agent},align=center] [$\overline{\textrm{Voice}}$
+         [Inceptive-II-P
+          [\phantom{C}] [$\overline{\textrm{Inceptive-II}}$,name=inceptivebar
+           [vP,edge=dotted
+            [DP] [$\overline{\textrm{v}}$
+             [VP
+              [XP\\\textsc{resultant}\\\textsc{state},align=center] [$\overline{\textrm{V}}$
+               [\phantom{C}] [V]
+              ]
+             ] [\textsc{v}\\\textsc{cause},align=center]
+            ]
+           ] [Inceptive-II,name=inceptive]
+          ]
+        ] [Voice]
+       ]
+      ] [Habitual,name=habitual]
+     ] 
+    ] [I]
+   ]
+  ] [C,name=c]
+ ]
+]
+\node[right=1cm of habitual,text width=3cm,align=left] (outer) {Outer aspects\\Manual concatenation};
+\path let \p1 = (c), \p2 = (outer) in node at (\x2,\y1) [text width=3cm,align=left] {Non-manual layering};
+\path let \p1 = (inceptive), \p2 = (outer) in node at (\x2,\y1) [text width=3cm,align=left] (inner) {Inner aspects\\Inner layering};
+\begin{scope}[on background layer]
+\node at (habitualbar) [fill=gray!30, inner sep=0pt, ellipse, minimum width=2.5cm, minimum height=4.5cm, rotate=45,overlay] (outerarea)  {};
+\node at (inceptivebar) [fill=gray!30, inner sep=0pt, ellipse, minimum width=2.5cm, minimum height=4.75cm, rotate=55,overlay] (innerarea)  {};
+\end{scope}
+\draw (outer.north west) -- (outerarea);
+\draw (inner.north west) -- (innerarea);
+\end{forest}
 \end{figure}
