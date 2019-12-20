@@ -1226,8 +1226,50 @@ The distinction between outer aspects quantifying over events and inner aspects 
 An operator, in this case an aspect, quantifying over an event needs to take scope above the VoiceP level. The aspects with the label I will be discussed in the following sections in this chapter. Operators, again called aspects, quantifying over processes (or: sub-events) take scope inside the VoiceP. These aspects, labeled II, will be discussed in the following chapter. The guiding hypothesis will be that outer aspects find manual expression while \is{inner aspect}inner aspects are expressed via modification of the verb sign (in other words: by adding a bound or coalesced morpheme). 
 
 \begin{figure}
+\footnotesize
 \caption{\color{red}Please provide a caption\label{treeoverviestwo}}
-            \includegraphics[width=\textwidth]{treesimplesw.jpg}
+%             \includegraphics[width=\textwidth]{treesimplesw.jpg}
+\begin{forest} for tree={calign=fixed angles,s sep=5ex}
+[CP
+ [\phantom{C}] [$\overline{\textrm{C}}$
+  [IP 
+   [$\overline{\textrm{I}}$,s sep=10ex
+    [I] [HabitualP
+     [\phantom{H}] [$\overline{\textrm{Habitual}}$,name=habitualbar
+      [VoiceP, edge=dotted
+       [DP\\\textsc{agent},align=center]
+       [$\overline{\textrm{Voice}}$,s sep=5ex
+        [Inceptive-II-P
+        [\phantom{I}] [$\overline{\textrm{Inceptive-II}}$,name=inceptivebar,s sep=5ex
+         [vP,edge=dotted
+            [DP] [$\overline{\textrm{v}}$
+              [VP
+               [XP\\\textsc{resultant}\\\textsc{state}]
+               [$\overline{\textrm{V}}$
+                 [\phantom{V}] [V]
+               ]
+              ] [v\\\textsc{cause},align=center]
+             ]
+         ] [Inceptive-II,name=inceptive]
+        ] 
+       ] [Voice]
+     ] 
+   ] [Habitual,name=habitual] 
+   ]
+  ]
+  ] [\phantom{I}]
+  ] [C]
+ ]   
+]
+\node[right=1cm of habitual,text width=3cm,align=left] (outer) {Outer aspects\\Quantification over events};
+\path let \p1 = (inceptive), \p2 = (outer) in node at (\x2,\y1) [text width=3cm,align=left] (inner) {Inner aspects\\Quantification over processes};
+\begin{scope}[on background layer]
+\node at (habitualbar) [fill=gray!30, inner sep=0pt, ellipse, minimum width=2.5cm, minimum height=4.75cm, rotate=55,overlay] (outerarea)  {};
+\node at (inceptivebar) [fill=gray!30, inner sep=0pt, ellipse, minimum width=2.5cm, minimum height=4.75cm, rotate=55,overlay] (innerarea)  {};
+\end{scope}
+\draw (outer.north west) -- (outerarea);
+\draw (inner.north west) -- (innerarea);
+\end{forest}
 \end{figure}
 
 \section{Habitual aspect (\textit{usually})}\label{habitualaspect}\is{habitual aspect|(}
