@@ -26,13 +26,14 @@ main.snd: main.bbl
 	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.sdx # ordering of references to footnotes
 	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.adx
 	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.ldx
-	sed -i 's/.*Office.*/\1/' main.adx
-	sed -i 's/.*Team.*/\1/' main.adx
-	sed -i 's/.*Bureau.*/\1/' main.adx
-	sed -i 's/.*Organisation.*/\1/' main.adx
-	sed -i 's/.*Organization.*/\1/' main.adx
-	sed -i 's/.*Embassy.*/\1/' main.adx
-	sed -i 's/.*Association.*/\1/' main.adx
+	sed -i 's/.*Office.*//' main.adx
+	sed -i 's/.*Team.*//' main.adx
+	sed -i 's/.*Bureau.*//' main.adx
+	sed -i 's/.*Organisation.*//' main.adx
+	sed -i 's/.*Organization.*//' main.adx
+	sed -i 's/.*Embassy.*//' main.adx
+	sed -i 's/.*Association.*//' main.adx
+	sed -i 's/.*Commission.*//' main.adx
 	python3 fixindex.py
 	mv mainmod.adx main.adx
 	makeindex -o main.and main.adx
@@ -49,16 +50,8 @@ cover: FORCE
 	convert main.pdf\[0\] -quality 100 -background white -alpha remove -bordercolor "#999999" -border 2  -resize x495 coveromp.png
 	display cover.png
 
-
-googlebooks: googlebooks_interior.pdf
-
-googlebooks_interior.pdf: 
-	cp main.pdf googlebooks_interior.pdf
-	pdftk main.pdf cat 1 output googlebooks_frontcover.pdf 
-
 openreview: openreview.pdf
 	
-
 openreview.pdf: 
 	pdftk main.pdf multistamp orstamp.pdf output openreview.pdf 
 
@@ -103,7 +96,8 @@ paperhive:
 firstedition:
 	git checkout gh-pages
 	git pull 
-	python getfirstedition.pdf `cat ID`
+	basename `pwd` > ID
+	python getfirstedition.py  `cat ID`
 	git add first_edition.pdf 
 	git commit -am 'provide first edition'
 	git push origin gh-pages 
@@ -168,18 +162,6 @@ README.md:
 	
 supersede: convert cover.png -fill white -colorize 60%  -pointsize 64 -draw "gravity center fill red rotate -45  text 0,12 'superseded' "  superseded.png; display superseded.png
 
-
-publish: googlebooks
-	cp main.pdf final.pdf 
-	cp main.pdf first_edition.pdf
-	git checkout gh-pages
-	git add first_edition.pdf 
-	vim versions.json
-	git commit -am 'provide first version'
-	git push origin gh-pages
-	git checkout master
-	wikicite
-# 	make bookblock modulo 4
 
 wikicite: 
 	echo '<ref name="abc">{{Cite book' > wiki
