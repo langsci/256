@@ -6,7 +6,7 @@
 
 %% Example {bsp:advadvadvorderitalfrench} is very small; do you have an idea to make it more readable? :)
 
-\documentclass[output=book,nonflat,modfonts
+\documentclass[output=book,nonflat,modfonts,
 colorlinks,citecolor=brown,
 %  draft
 ,draftmode
@@ -21,7 +21,7 @@ colorlinks,citecolor=brown,
 \input{localcommands.tex} 
 \addbibresource{localbibliography.bib}
 
-\includeonly{chapters/06}
+% \includeonly{chapters/06}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Frontmatter                      %%% 
@@ -32,7 +32,7 @@ colorlinks,citecolor=brown,
 % \include{chapters/dedication}
 
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
-
+ 
 {\sloppy\tableofcontents}
 
 \include{chapters/preface}
