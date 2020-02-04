@@ -89,7 +89,7 @@ As External Merge always combines two lexical items (or more broadly speaking, t
 \begin{exe}
 \ex\label{xbar} 
 \begin{forest}
-[XP [SpecXP][$\overline{\textrm{X}}$ [X\textdegree][YP (Complement)]]]
+[XP, s sep=12mm [SpecXP][$\overline{\textrm{X}}$ [X\textdegree][YP (Complement)]]]
 %[CP[C][IP[I][VP[V][NP]]]]
 \end{forest}
 \end{exe}
@@ -99,7 +99,7 @@ As External Merge always combines two lexical items (or more broadly speaking, t
 \begin{exe}
 \ex\label{xbarb} 
 \begin{forest}
-[XP[$\overline{\textrm{X}}$ [YP (Complement)][X\textdegree]] [SpecXP]]
+[XP, s sep=12mm [$\overline{\textrm{X}}$ [YP (Complement)][X\textdegree]] [SpecXP]]
 %[CP[C][IP[I][VP[V][NP]]]]
 \end{forest}
 \end{exe}
@@ -264,7 +264,7 @@ By now, we have seen that, in \is{English}English, evaluative adjectives precede
 \ex \label{ex:kittenadjunctiontreeb}
 \begin{forest}
 %for tree={s sep=25mm, inner sep=0, l=20mm} %s sep = Breite; l = Höhe
-[NP [SpecNP] [$\overline{\textrm{N}}$ [Adj\textdegree [cute]][$\overline{\textrm{N}}$ [Adj\textdegree [tiny]][$\overline{\textrm{N}}$[N\textdegree[kitten]][{\phantom{N}}]]]]]
+[NP, s sep=12mm [SpecNP] [$\overline{\textrm{N}}$ [Adj\textdegree [cute]][$\overline{\textrm{N}}$ [Adj\textdegree [tiny]][$\overline{\textrm{N}}$[N\textdegree[kitten]][{\phantom{N}}]]]]]
 %[CP[C][IP[I][VP[V][NP]]]]
 \end{forest}
 
@@ -272,6 +272,7 @@ By now, we have seen that, in \is{English}English, evaluative adjectives precede
 \end{xlist}
 \end{multicols}
 \end{exe}
+
 
 
 
@@ -303,7 +304,8 @@ So far, we have seen that English exhibits a strict ordering of adjective phrase
 \begin{exe}
 \ex\label{ex:adjectivetree}\resizebox{\linewidth}{!}{%
 \begin{forest}
-[DP[SpecDP][$\overline{\textrm{D}}$ [D\textdegree [These]][NumP[AdvP[three,roof]][$\overline{\textrm{Num}}$[Num\textdegree][EvalP[AdvP[beautiful,roof]][$\overline{\textrm{Eval}}$[Eval\textdegree][SizeP[AdvP[huge,roof]][$\overline{\textrm{Size}}$[Size\textdegree][AgeP[AdvP[old,roof]][$\overline{\textrm{Age}}$[Age\textdegree][ShapeP[AdvP[round,roof]][$\overline{\textrm{Shape}}$[Shape\textdegree][ColorP[AdvP[brown,roof]][$\overline{\textrm{Color}}$[Color\textdegree][NP[rugs,roof]]]]]]]]]]]]]]]]
+for tree={l=10mm} %s sep = Breite; l = Höhe
+[DP, s sep=6mm[SpecDP][$\overline{\textrm{D}}$ [D\textdegree [These]][NumP[AdvP[three,roof]][$\overline{\textrm{Num}}$, s sep=6mm[Num\textdegree][EvalP[AdvP[beautiful,roof]][$\overline{\textrm{Eval}}$, s sep=6mm[Eval\textdegree][SizeP[AdvP[huge,roof]][$\overline{\textrm{Size}}$, s sep=6mm[Size\textdegree][AgeP[AdvP[old,roof]][$\overline{\textrm{Age}}$, s sep=6mm[Age\textdegree][ShapeP[AdvP[round,roof]][$\overline{\textrm{Shape}}$, s sep=6mm[Shape\textdegree][ColorP[AdvP[brown,roof]][$\overline{\textrm{Color}}$, s sep=6mm[Color\textdegree][NP[rugs,roof]]]]]]]]]]]]]]]]
 %[NP [AdjP [cute, roof]] [NP[AdjP [tiny, roof]][NP[SpecNP][$\overline{\textrm{N}}$ [{N\textdegree}[kitten]] [{\phantom{N}}] ]]]]
 \end{forest}}
 \end{exe}
