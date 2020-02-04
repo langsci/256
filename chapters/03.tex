@@ -31,25 +31,20 @@ While English indicative main clauses exhibit a basic S-V-O order, or in clauses
 \setlength{\columnsep}{-80pt}
 \begin{multicols}{2}
 \begin{xlist}
-\ex \label{ex:basiccpstructureaa}
+\ex \label{ex:basiccpstructureaa}\resizebox{0.9\linewidth}{!}{%
 \begin{forest}
 for tree={s sep=4mm, inner sep=0, l=1mm} %s sep = Breite; l = Höhe
-[CP, for tree={s sep=4mm} [SpecCP][$\overline{\textrm{C}}$, for tree={s sep=4mm} [C\textdegree][IP[DP[Kassandra,roof]][$\overline{\textrm{I}}$[I\textdegree [will]][VP[SpecVP][$\overline{\textrm{V}}$[V\textdegree [eat]][DP [an apple, roof]]]]]]]]
+[CP, s sep=12mm [SpecCP][$\overline{\textrm{C}}$, s sep=15mm [C\textdegree][IP[DP[Kassandra,roof]][$\overline{\textrm{I}}$[I\textdegree [will]][VP[SpecVP][$\overline{\textrm{V}}$[V\textdegree [eat]][DP [an apple, roof]]]]]]]]
 %[NP [AdjP [cute, roof]] [NP[AdjP [tiny, roof]][NP[SpecNP][$\overline{\textrm{N}}$ [{N\textdegree}[kitten]] [{\phantom{N}}] ]]]]
-\end{forest}
+\end{forest}}
 
-\ex \label{ex:basiccpstructureab}
+\ex \label{ex:basiccpstructureab}\resizebox{0.9\linewidth}{!}{%
 \begin{forest}
 for tree={s sep=0.5mm, inner sep=0, l=1mm} %s sep = Breite; l = Höhe
 [CP [SpecCP [what, roof,name=what]][$\overline{\textrm{C}}$ [C\textdegree [will,name=will]][IP[DP[Kassandra,roof]][$\overline{\textrm{I}}$[I\textdegree [\textit{t}\textsubscript{1},name=t1]][VP[SpecVP][$\overline{\textrm{V}}$[V\textdegree [eat]][DP [\textit{t}\textsubscript{2},name=t2]]]]]]]]
-\draw[semithick, ->] (t2.south) to [bend right=-90] (what.west);
 \draw[semithick, ->] (t1.south) to [bend right=-90] (will.west);
-%\draw[->] (t2) to[out=south west,in=south] (what);
-%\draw[semithick, ->] (t2.south) to [bend left=100] (what.west);
-%\draw[semithick, ->] (t2.south)..controls +(south:3) and +(west:3)..(what.west);
-%\draw[semithick, ->] (t1.south) to [bend left=120] (will.west);
-%\draw[->] (t1) to[out=south west,in=south] (will);
-\end{forest}
+\draw[semithick, ->] (t2.south)..controls +(south:1) and +(south west:3)..(what.west);
+\end{forest}}
 
 
 \end{xlist}
@@ -1136,27 +1131,15 @@ An example of the latter case is the Gbe language \is{Gungbe}Gungbe\label{gungbe
 
 \noindent Other Gbe languages exhibit clause-final question particles and other structurally high categories, such as encoding the speaker's point of view, are also realized as clause-final heads \citep[211--213]{lefebvre2006creole}. Following \citeauthor{kayne1994antisymmetry}'s (\citeyear{kayne1994antisymmetry}) idea that heads always precede their complements, \citet{aboh2004morphosyntax} and  \citet{aboh2004left} argue that the interrogative feature, labeled $[+$interrogative$]$ here, located in the head of a (left-headed) interrogative phrase (IntP) attracts the whole proposition in a Gungbe\is{Gungbe}\is{Gbe} polar interrogative into its specifier. This is illustrated, in a slightly simplified version, in the tree in (\ref{ex:gungbepolarinterrogativetree}).
 
-%\begin{exe}
-%\ex\label{ex:gungbepolarinterrogativetree} 
-%\begin{adjustbox}{width=\linewidth}
-%\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.80]
-%\tikzset{level distance=35pt,sibling distance=5pt,every tree node/.style={align=center,anchor=north}}
-%\Tree [.ForceP [.{SpecForceP} ] [.{$\overline{\textrm{Force}}$} [.{Force\textdegree } ] [.InterP [.SpecInterP \edge[roof]; \node(sleepyman){S\'{ɛ}t\`{ɔ} kò w\^{a}?}; ] [.{$\overline{\textrm{Inter}}$} [.{Inter\textdegree } {$[+$interrogative$]$} ] [.TopP [.SpecTopP ] [.{$\overline{\textrm{Top}}$} [.{Topic\textdegree } ] [.FocP [.SpecFocP ] [.{$\overline{\textrm{Foc}}$} [.{Foc\textdegree } ] [.IP \edge[roof]; \node(t){\qquad \textit{t} \qquad}; ] ] ] ] ] ] ] ] ]
-%\draw[semithick,->] (t)..controls +(south west:4) and +(south:2)..(sleepyman);
-%
-%\end{tikzpicture}
-%\end{adjustbox}
-%\end{exe}
-
 \begin{exe}
-\ex\label{ex:gungbepolarinterrogativetree} 
+\ex\label{ex:gungbepolarinterrogativetree}\resizebox{\linewidth}{!}{%
 \begin{forest}
 for tree={s sep=5mm, inner sep=0, l=1mm} %s sep = Breite; l = Höhe
-[ForceP [{SpecForceP} ] [{$\overline{\textrm{Force}}$} [{Force\textdegree } ] [InterP [SpecInterP [{S\'{ɛ}t\`{ɔ} kò w\^{a}?}, roof, name=sleepyman]] [{$\overline{\textrm{Inter}}$} [{Inter\textdegree } [{$[+$interrogative$]$}] ] [TopP [SpecTopP ] [{$\overline{\textrm{Top}}$} [{Topic\textdegree } ] [FocP [SpecFocP ] [{$\overline{\textrm{Foc}}$} [{Foc\textdegree } ] [IP [{\phantom{NNN}\textit{t}\phantom{NNN}}, roof, name=t] ] ] ] ] ] ] ] ] ]
+[ForceP,s sep=15mm [{SpecForceP} ] [{$\overline{\textrm{Force}}$},s sep=15mm [{Force\textdegree } ] [InterP [SpecInterP [{S\'{ɛ}t\`{ɔ} kò w\^{a}?}, roof, name=sleepyman]] [{$\overline{\textrm{Inter}}$} [{Inter\textdegree } [{$[+$interrogative$]$}] ] [TopP,s sep=15mm [SpecTopP ] [{$\overline{\textrm{Top}}$},s sep=15mm [{Topic\textdegree } ] [FocP,s sep=15mm [SpecFocP ] [{$\overline{\textrm{Foc}}$},s sep=15mm [{Foc\textdegree } ] [IP [{\phantom{NNN}\textit{t}\phantom{NNN}}, roof, name=t] ] ] ] ] ] ] ] ] ]
 %\draw[semithick,->] (t)..controls +(southwest:-4) and +(south:0.1)..(sleepyman);
 \draw[->] (t) to[out=south west,in=south] (sleepyman);
 %[CP[C][IP[I][VP[V][NP]]]]
-\end{forest}
+\end{forest}}
 \end{exe}
 
 %%%%%%%%%%%%%%%%%%%
@@ -1344,38 +1327,7 @@ The\is{focus doubling} same conclusions are to be drawn from the position of foc
 \noindent Doubling as in (\ref{ex:unmarkedpolarvsdoublingb}) has generally been referred to as `focus doubling' in the literature. The term `focus doubling' is chosen as it is assumed that the clause-final double is located in a focus position, to be more precise in the head of a focus phrase as only heads, but not phrases, can be doubled (e.g., \citealt{de1999phrase, sandler2006sign}, but see \citealt{wilbur2012informationstructure} who argues that doubling does not serve as a focus, but as a marker of emphasis). This is in line with the idea that focus is located in a clause-final position in many sign languages (see \citealt{wilbur1991intonation, wilbur1994foregrounding, wilbur1996evidence, wilbur1997prosodic} for \is{American Sign Language}American Sign Language). Besides pronouns, other parts of speech can undergo doubling in DGS as well. This is, for example, true for \textit{wh}-signs or modals. 
 
 If the focus double is in the head of FocP, the fact that it occurs clause-finally in DGS is, again, in line with the idea of the IP being moved to SpecIntP or a right-headed Foc\textdegree . Additionally, both modeling possibilities are in line with the fact that the intensity peak of the non-manuals is clause-final in DGS. If taken to the extremes (with all heads and specifiers on the same side), these two modeling possibilities look as depicted in (\ref{ex:polarquestionsanalyis}). 
-%\vspace{-0.5cm}
-%\clearpage
-%\begin{exe}
-%\ex\label{ex:polarquestionsanalyis}
-%\begin{multicols}{2}
-%\begin{xlist}
-%
-%\ex \label{ex:polarquestionsanalyisa}
-%\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.7]
-%\tikzset{sibling distance=1pt}
-%\tikzset{every tree node/.style={align=left,anchor=north}}
-%\Tree [.IntP [.{$\overline{\textrm{Int}}$} [.FocP [.{$\overline{\textrm{Foc}}$} [.IP \edge[roof]; \node(t){\qquad\qquad}; ] [.{Foc\textdegree } ] ] [.SpecFocP ] ] [.{Int\textdegree } ] ] [.SpecIntP ] ]
-%\end{tikzpicture}
-%
-%
-%\ex\label{ex:polarquestionsanalyisb}
-%\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.7]
-%\tikzset{sibling distance=1pt}
-%\tikzset{every tree node/.style={align=left,anchor=north}}
-%
-%\Tree [.IntP [.SpecIntP \edge[roof]; \node(specintp){\textcolor{white}{blablabla}}; ] [.{$\overline{\textrm{Int}}$} [.{Int\textdegree } ] [.FocP [.SpecFocP ] [.{$\overline{\textrm{Foc}}$} [.{Foc\textdegree } ] [.IP \edge[roof]; \node(t){\qquad\qquad}; ] ] ] ] ]
-%
-%\draw[semithick,->] (t)..controls +(south west:4) and +(south:2)..(specintp);
-%
-%
-%
-%\end{tikzpicture}
-%
-%
-%\end{xlist}
-%\end{multicols}
-%\end{exe}
+
 
 
 
@@ -1383,26 +1335,23 @@ If the focus double is in the head of FocP, the fact that it occurs clause-final
 \begin{exe}
 \ex\label{ex:polarquestionsanalyis} 
 \begin{xlist}
-
+\begin{multicols}{2}
 \ex \label{ex:polarquestionsanalyisa}
 \begin{forest}
-for tree={s sep=5mm, inner sep=0, l=12mm} %s sep = Breite; l = Höhe
-[IntP [{$\overline{\textrm{Int}}$} [FocP [{$\overline{\textrm{Foc}}$} [IP [{\qquad\qquad}, roof] ] [{Foc\textdegree } ] ] [SpecFocP ] ] [{Int\textdegree } ] ] [.SpecIntP ] ]
-%[CP[C][IP[I][VP[V][NP]]]]
+for tree={s sep=5mm, inner sep=0, l=10mm} %s sep = Breite; l = Höhe
+[IntP [{$\overline{\textrm{Int}}$} [FocP [{$\overline{\textrm{Foc}}$} [IP [{\qquad\qquad}, roof] ] [{Foc\textdegree } ] ] [SpecFocP ] ] [{Int\textdegree } ] ] [SpecIntP ] ]
 \end{forest}
-
-
 \ex\label{ex:polarquestionsanalyisb}
-
 \begin{forest}
-for tree={s sep=5mm, inner sep=0, l=12mm} %s sep = Breite; l = Höhe
+for tree={s sep=5mm, inner sep=0, l=10mm} %s sep = Breite; l = Höhe
 [IntP [SpecIntP [{\textcolor{white}{blablabla}}, roof,name=specintp] ] [{$\overline{\textrm{Int}}$} [{Int\textdegree } ] [FocP [SpecFocP ] [{$\overline{\textrm{Foc}}$} [{Foc\textdegree } ] [IP [{\qquad\qquad}, roof, name=t] ] ] ] ] ]
-\draw[semithick,->] (t)..controls +(south west:4) and +(south:2)..(specintp);
-%[CP [SpecCP] [$\overline{\textrm{C}}$ [IP[SpecIP][$\overline{\textrm{I}}$[VP[SpecVP][$\overline{\textrm{V}}$[{\phantom{V}}][V\textdegree]]][I\textdegree]]][C\textdegree]]]
-%%[CP[C][IP[I][VP[V][NP]]]]
+\draw[semithick,->] (t)..controls +(south west:2) and +(south:1)..(specintp);
 \end{forest}
+\end{multicols}
 \end{xlist}
-\end{exe}\vspace*{-1cm}
+\end{exe}
+\vspace*{-1cm}
+
 
 \noindent The structure on the left (\ref{ex:polarquestionsanalyisa}) allows specifiers and heads to the right, while the structure on the right (\ref{ex:polarquestionsanalyisb}) shows an anti-symmetric Aboh-\&-Pfau-style structure with all heads and specifiers to the left. To form a polar interrogative, we need to assume movement of the IP material into the specifier of the IntP in the right structure. The non-manuals would then be triggered by spec-head agreement. In the case that a focus double is present, we would assume that it is not only the IP, but the whole FocP that moves to SpecInt. For the model on the left, one would assume an active Int\textdegree\ triggering the non-manuals via c-command without additional movement to SpecInt. In both models, \textsc{p-ug} and focus doubles are predicted to be clause final.
 
@@ -1443,7 +1392,7 @@ However, the models differ in their prediction of how \textsc{p-ug} and the focu
 \ex \label{ex:polarquestionsanalyisaaba}
 \begin{forest}
 for tree={s sep=25mm, inner sep=0, l=12mm} %s sep = Breite; l = Höhe
-[IntP [{$\overline{\textrm{Int}}$} [FocP [{$\overline{\textrm{Foc}}$} [IP [{\textsc{index}\textsubscript{2} \textsc{beer buy}},roof] ] [{Foc\textdegree } {\textsc{index}\textsubscript{2}} ] ] [SpecFocP ] ] [{Int\textdegree } {\textsc{p-ug}} ] ] [SpecIntP ] ]
+[IntP [{$\overline{\textrm{Int}}$},s sep=15mm [FocP [{$\overline{\textrm{Foc}}$},s sep=15mm [IP [{\textsc{index}\textsubscript{2} \textsc{beer buy}},roof] ] [{Foc\textdegree } [{\textsc{index}\textsubscript{2}}] ] ] [SpecFocP ] ] [{Int\textdegree } [{\textsc{p-ug}}] ] ] [SpecIntP ] ]
 %[CP[C][IP[I][VP[V][NP]]]]
 \end{forest}
 
@@ -1460,50 +1409,14 @@ for tree={s sep=25mm, inner sep=0, l=12mm} %s sep = Breite; l = Höhe
 \ex \label{ex:polarquestionsanalyisaababbbb}
 \begin{forest}
 for tree={s sep=5mm, inner sep=0, l=12mm} %s sep = Breite; l = Höhe
-[IntP [SpecIntP [{\textcolor{white}{blablabla}},roof,name=specintp] ] [{$\overline{\textrm{Int}}$} [{Int\textdegree } [{\textsc{p-ug}}] ] [FocP,tikz={\node [draw,gray,circle,fit to=tree]{};} [SpecFocP [{\textcolor{white}{blablabla}},roof,name=specfocp] ] [{$\overline{\textrm{Foc}}$} [{Foc\textdegree } [{\textsc{index}\textsubscript{2}},name=fochead] ] [IP,tikz={\node [draw,gray,circle,fit to=tree]{};} [{\textsc{index}\textsubscript{2} \textsc{beer buy}},roof,name=insideip] ] ] ] ] ]
-\draw[semithick, ->] (insideip.west)..controls +(south:2) and +(south:2)..(fochead.south) node [midway,fill=white] {{\tiny 1}};
+[IntP [SpecIntP [{\textcolor{white}{blablabla}},roof,name=specintp] ] [{$\overline{\textrm{Int}}$} [{Int\textdegree } [{\textsc{p-ug}}] ] [FocP,tikz={\node [draw,gray,circle,fit to=tree, inner sep=-3.5pt]{};} [SpecFocP [{\textcolor{white}{blablabla}},roof,name=specfocp] ] [{$\overline{\textrm{Foc}}$} [{Foc\textdegree } [{\textsc{index}\textsubscript{2}},name=fochead] ] [IP,tikz={\node [draw,gray,circle,fit to=tree]{};} [{\textsc{index}\textsubscript{2} \textsc{beer buy}},roof,name=insideip] ] ] ] ] ]
+\draw[semithick, ->] (insideip.west)..controls +(south:1) and +(south:2)..(fochead.south) node [midway,fill=white] {{\tiny 1}};
 \draw[semithick, ->] (5.2,-7.0)..controls +(south:3) and +(south:3.7)..(specfocp.south) node [midway,fill=white] {{\tiny 2}};
-\draw[semithick, ->] (2,-7.39)..controls +(south:2) and +(south:8)..(specintp.south) node [midway,fill=white] {{\tiny 3}};
-%\draw[semithick,->] (t)..controls +(south west:4) and +(south:2)..(sleepyman);
-%\draw[semithick, ->] (5,-5.7)..controls +(south:2) and +(south:2)..(fochead.south) node [midway,fill=white] {{\tiny 1}};
-%\draw[semithick, ->] (5.2,-6.3)..controls +(south:3) and +(south:3.7)..(specfocp.south) node [midway,fill=white] {{\tiny 2}};
-%\draw[semithick, ->] (4.4,-8.9)..controls +(south:3) and +(south west:7)..(specintp.south) node [midway,fill=white] {{\tiny 3}};
-%[CP[C][IP[I][VP[V][NP]]]]
+\draw[semithick, ->] (1.8,-6.9)..controls +(south:2) and +(south:8)..(specintp.south) node [midway,fill=white] {{\tiny 3}};
 \end{forest}
-
-
-
-%\draw[gray] (5.2,-5.2) ellipse (2.2cm and 1.1cm); %breite and höhe
-%\draw[gray] (4.1,-4.9) circle (4cm);
-
-
-  
-
 \end{exe}
 
 
-%\begin{exe}
-%\ex \label{ex:polarquestionsanalyisaababbbb}
-%
-%\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.75]
-%\tikzset{sibling distance=1pt}
-%\tikzset{every tree node/.style={align=left,anchor=north}}
-%
-%\Tree [.IntP [.SpecIntP \edge[roof]; \node(specintp){\textcolor{white}{blablabla}}; ] [.{$\overline{\textrm{Int}}$} [.{Int\textdegree } {\textsc{p-ug}} ] [.FocP [.SpecFocP \edge[roof]; \node(specfocp){\textcolor{white}{blablabla}}; ] [.{$\overline{\textrm{Foc}}$} [.{Foc\textdegree } \node(fochead){\textsc{index}\textsubscript{2}}; ] [.IP \edge[roof]; \node(insideip){\textsc{index}\textsubscript{1} \textsc{beer buy}}; ] ] ] ] ]
-%
-%\draw[semithick, ->] (5,-5.7)..controls +(south:2) and +(south:2)..(fochead.south) node [midway,fill=white] {{\tiny 1}};
-%\draw[semithick, ->] (5.2,-6.3)..controls +(south:3) and +(south:3.7)..(specfocp.south) node [midway,fill=white] {{\tiny 2}};
-%\draw[semithick, ->] (4.4,-8.9)..controls +(south:3) and +(south west:7)..(specintp.south) node [midway,fill=white] {{\tiny 3}};
-%%\draw [semithick, ->, bend left=90] (4.4,-8.9) to node [description] {\tiny 3} (specintp);
-%\draw[gray] (5.2,-5.2) ellipse (2.2cm and 1.1cm); %breite and höhe
-%\draw[gray] (4.1,-4.9) circle (4cm);
-%\end{tikzpicture}
-%
-  %
-%
-%\end{exe}
-
-%\vspace{-1.0cm}
 
 \noindent To this end, from the empirical data available, it cannot be decided which derivation is correct. However, the fact that the right-headed structure can explain the clause-final intensity peak of the non-manuals via c-command and is able to derive the right order without any additional movements makes it more likely to be on the right track. %An open question is if \textsc{p-ug} and the  
 
@@ -1588,6 +1501,7 @@ for tree={s sep=10mm, inner sep=0, l=10mm} %s sep = Breite; l = Höhe
 
 
 \end{exe}
+
 
 
 %\begin{exe}
@@ -2018,7 +1932,7 @@ for tree={s sep=25mm, inner sep=0, l=12mm} %s sep = Breite; l = Höhe
 
 \end{exe}
 
-%\begin{exe}
+%\begin{exe}\
 %\ex\label{ex:neidleaaronsundcorightwardmovementanalysis} 
 %\begin{adjustbox}{width=0.87\linewidth}
 %\begin{tikzpicture}[baseline]
@@ -2731,129 +2645,56 @@ Alternatively, a similar idea would be to model \textit{wh}-movement in DGS simi
 
 In this model, it has to be assumed that after all movement steps are completed, the remainder of the clause is moved into the specifier of the InterP. Assuming that it is feature checking between SpecInterP and Inter\textdegree\ that triggers the non-manual markings, all material is accompanied by brow lowering with the intensity peak being clause-final. 
 
-%\vspace{-0.3cm}
-
-
-
 \begin{exe}
 \ex\label{remnantmovementitalianstyle}
 \begin{forest}
 for tree={s sep=7mm, inner sep=0, l=5mm} %s sep = Breite; l = Höhe
-[{InterP} [SpecInterP [{\phantom{NNN}}, roof, name=specintp] ] [{$\overline{\textrm{Int}}$} [{Inter\textdegree } ] [{CP\textsubscript{1}} [SpecCP\textsubscript{1} [{\phantom{NNN}}, roof, name=speccp1] ] [{$\overline{\textrm{CP\textsubscript{1}}}$} [{C\textsubscript{1}\textdegree} ] [{XP} [SpecXP [{\phantom{NNN}}, roof, name=specintp2] ] [{$\overline{\textrm{X}}$} [{X\textdegree } ] [{CP\textsubscript{2}} [SpecCP\textsubscript{2} [{\phantom{NNN}}, roof, name=speccp2]] [{$\overline{\textrm{CP\textsubscript{2}}}$} [{C\textsubscript{1}\textdegree} ] [IP [{\phantom{NNN}}, roof, name=ip] ] ] ] ] ] ] ] ] ]
-%[.IP \edge[roof]; \node(ip){\textsc{paul} $t$\textsubscript{i} \textsc{buy}}; 
+[{InterP} [SpecInterP [{\phantom{NNN}}, roof, name=specintp] ] [{$\overline{\textrm{Int}}$},s sep=15mm [{Inter\textdegree } ] [{CP\textsubscript{1}} [SpecCP\textsubscript{1} [{\phantom{NNN}}, roof, name=speccp1] ] [{$\overline{\textrm{CP\textsubscript{1}}}$},s sep=15mm [{C\textsubscript{1}\textdegree} ] [{XP} [SpecXP [{\phantom{NNN}}, roof, name=specintp2] ] [{$\overline{\textrm{X}}$},s sep=15mm [{X\textdegree } ] [{CP\textsubscript{2}} [SpecCP\textsubscript{2} [{\phantom{NNN}}, roof, name=speccp2]] [{$\overline{\textrm{CP\textsubscript{2}}}$},s sep=15mm [{C\textsubscript{1}\textdegree} ] [IP [{\phantom{NNN}}, roof, name=ip] ] ] ] ] ] ] ] ] ]
 \end{forest}
 \end{exe}
-%
-%\begin{exe}
-%\ex\label{remnantmovementitalianstyle}
-%\begin{adjustbox}{max width=0.90\textwidth}
-%\begin{tikzpicture}[baseline]
-%\tikzset{level distance=35pt,sibling distance=10pt}
-%\Tree [.{InterP} [.SpecInterP \edge[roof]; \node(specintp){\textcolor{white}{something here}}; ] [.{$\overline{\textrm{Int}}$} [.{Inter\textdegree } ] [.{CP\textsubscript{1}} [.SpecCP\textsubscript{1} \edge[roof]; \node(speccp1){\textcolor{white}{something here}}; ] [.{$\overline{\textrm{CP\textsubscript{1}}}$} [.{C\textsubscript{1}\textdegree} ] [.{XP} [.SpecXP \edge[roof]; \node(specintp){\textcolor{white}{something here}}; ] [.{$\overline{\textrm{X}}$} [.{X\textdegree } ] [.{CP\textsubscript{2}} [.SpecCP\textsubscript{2} \edge[roof]; \node(speccp2){\textcolor{white}{something here}}; ] [.{$\overline{\textrm{CP\textsubscript{2}}}$} [.{C\textsubscript{1}\textdegree} ] [.IP \edge[roof]; \node(ip){\textcolor{white}{something here}}; ] ] ] ] ] ] ] ] ]
-%
-%%[.IP \edge[roof]; \node(ip){\textsc{paul} $t$\textsubscript{i} \textsc{buy}}; ]
-%
-%
-%\end{tikzpicture}
-%\end{adjustbox}
-%\end{exe}
 
-
-%\vspace{-0.3cm}
 
 
 \noindent I will start again with clause-final simple \textit{wh}-phrases -- ignoring the fact that, in the end, all remaining material moves to SpecInter for the moment. First, the \textit{wh}-phrase is moved into SpecCP\textsubscript{2} and then, the rest of the clause is moved into SpecXP. This is shown in (\ref{ex:firstanalysisatwoa}). Clause-initial simple \textit{wh}-phrases are modeled by one additional step, namely by moving the \textit{wh}-phrase into the specifier of SpecCP\textsubscript{1}. This option is shown in (\ref{ex:firstanalysisbtwob}). Again, the more marked structure (the clause-initial simple \textit{wh}-phrase) is derived by additional movement and doubling is, again, achieved by not deleting the copy that is created in the first movement step.
 \clearpage
-%\vspace{-0.5cm}
+
 \begin{exe}
 \ex\label{ex:firstanalysisab}
-% \begin{multicols}{2}
 \begin{xlist}
+\begin{multicols}{2}
 \ex \label{ex:firstanalysisatwoa}
 \begin{forest}
 for tree={s sep=2.5mm, inner sep=0, l=5mm} %s sep = Breite; l = Höhe
 [{CP\textsubscript{1}} [{SpecCP\textsubscript{1}} [{\phantom{NNN}}, roof, name=speccp1] ] [{$\overline{\textrm{CP\textsubscript{1}}}$} [{C\textsubscript{1}\textdegree} ] [{XP} [{SpecXP} [{\phantom{NNN}}, roof, name=specintp] ] [{$\overline{\textrm{X}}$} [{X\textdegree } ] [{CP\textsubscript{2}} [{SpecCP\textsubscript{2}} [{\textsc{what\textsubscript{i}}}, roof, name=speccp2] ] [{$\overline{\textrm{CP\textsubscript{2}}}$} [{C\textsubscript{1}\textdegree} ] [{IP},tikz={\node [draw,gray,fit to=tree]{};} [{\textsc{paul} $\textrm{\textit{t}}$\textsubscript{i} \textsc{buy}}, roof, name=ip]] ] ] ] ] ] ]
-\draw[semithick,->] (ip.south) to [bend right=-60] node [midway,fill=white] {\small Step 1} (speccp2.south);
-%\draw[semithick,->] (ip)..controls +(west:3) and +(south:4)..(speccp2);
 \node (A) at (3.8,-7.0) {};
-%\draw[gray] (9.9,-9.3) circle (2cm);
-\draw[semithick,->] (A.south) to [bend right=-80] node [midway,fill=white] {\small Step 2} (specintp.south);
-\node (text) at (2.2,-8.0) {\slg[wh]{paul buy what}};
+\draw[semithick, <-] (speccp2.south)..controls +(south west:1) and +(south west:1.5)..(ip.south) node [midway,fill=white] {\small Step 1};
+\draw[semithick, <-] (specintp.south)..controls +(south west:3) and +(south west:3)..(A.south) node [midway,fill=white] {\small Step 2};
+\node (text) at (2.2,-9.0) {\slg[wh]{paul buy what}};
 \end{forest}
 \ex\label{ex:firstanalysisbtwob}
 \begin{forest}
 for tree={s sep=2.5mm, inner sep=0, l=5mm} %s sep = Breite; l = Höhe
 [{CP\textsubscript{1}} [{SpecCP\textsubscript{1}} [{\textsc{what\textsubscript{i}}}, roof, name=speccp1] ] [{$\overline{\textrm{CP\textsubscript{1}}}$} [{C\textsubscript{1}\textdegree} ] [{XP} [{SpecXP} [{\phantom{NNN}}, roof, name=specintp] ] [{$\overline{\textrm{X}}$} [{X\textdegree } ] [{CP\textsubscript{2}} [{SpecCP\textsubscript{2}} [{{\phantom{NN}}\textit{t}\textsubscript{i}{\phantom{NN}}}, roof, name=speccp2] ] [{$\overline{\textrm{CP\textsubscript{2}}}$} [{C\textsubscript{1}\textdegree} ] [{IP},tikz={\node [draw,gray,fit to=tree]{};} [{\textsc{paul} $\textrm{\textit{t}}$\textsubscript{i} \textsc{buy}}, roof, name=ip]] ] ] ] ] ] ]
-\draw[semithick,->] (ip.south) to [bend right=-80] node [midway,fill=white] {\small Step 1} (speccp2.south);
+9\draw[semithick, <-] (speccp2.south)..controls +(south west:1) and +(south west:1.5)..(ip.south) node [midway,fill=white] {\small Step 1};
 \draw[semithick,->] (speccp2.south) to [bend right=-80] node [midway,fill=white] {\small Step 3} (speccp1.south);
 \node (A) at (3.8,-7.0) {};
-%\draw[gray] (9.8,-9.3) circle (2cm);
-\draw[semithick,->] (A.south) to [bend right=-80] node [midway,fill=white] {\small Step 2} (specintp.south);
-\node (text) at (2.2,-8.0) {\slg[wh]{what paul buy}};
+\draw[semithick, <-] (specintp.south)..controls +(south west:3) and +(south west:3)..(A.south) node [midway,fill=white] {\small Step 2};
+\node (text) at (2.2,-9.0) {\slg[wh]{what paul buy}};
 \end{forest}
+\end{multicols}
 \end{xlist}
-% \end{multicols}
+
 \end{exe}
 
 
-
-%\begin{exe}
-%\ex\label{ex:firstanalysistwo}
-%\begin{multicols}{2}
-%\begin{xlist}
-%\ex \label{ex:firstanalysisatwoa}
-%\begin{adjustbox}{max width=0.46\textwidth}
-%\begin{tikzpicture}[baseline]
-%\tikzset{level distance=40pt,sibling distance=5pt}
-%\Tree [.{\LARGE CP\textsubscript{1}} [.{\LARGE SpecCP\textsubscript{1}} \edge[roof]; \node(speccp1){\textcolor{white}{something here}}; ] [.{\LARGE $\overline{\textrm{CP\textsubscript{1}}}$} [.{\LARGE C\textsubscript{1}\textdegree} ] [.{\LARGE XP} [.{\LARGE SpecXP} \edge[roof]; \node(specintp){\textcolor{white}{something here}}; ] [.{\LARGE $\overline{\textrm{X}}$} [.{\LARGE X\textdegree } ] [.{\LARGE CP\textsubscript{2}} [.{\LARGE SpecCP\textsubscript{2}} \edge[roof]; \node(speccp2){\LARGE \textsc{what\textsubscript{i}}}; ] [.{\LARGE $\overline{\textrm{CP\textsubscript{2}}}$} [.{\LARGE C\textsubscript{1}\textdegree} ] [.{\LARGE IP} \edge[roof]; \node(ip){\LARGE \textsc{paul} $\textrm{\textit{t}}$\textsubscript{i} \textsc{buy}}; ] ] ] ] ] ] ]
-%
-%\draw[semithick,->] (ip.south) to [bend right=-80] node [midway,fill=white] {\LARGE Step 1} (speccp2.south);
-%%\draw[semithick,->] (ip)..controls +(west:3) and +(south:4)..(speccp2);
-%\node (A) at (9.8,-11.0) {};
-%\draw[gray] (9.9,-9.3) circle (2cm);
-%\draw[semithick,->] (A.south) to [bend right=-80] node [midway,fill=white] {\LARGE Step 2} (specintp.south);
-%\node (text) at (2.2,-12.5) {\Huge \slg[wh]{paul buy what}};
-%%
-%%\node (overlinetext) at (3.5,-12.1) {wh};
-%%\node (text) at (2.2,-12.5) {$\overline{\textrm{\textsc{paul buy what}}}$};
-%
-%\end{tikzpicture}
-%\end{adjustbox}
-%\ex\label{ex:firstanalysisbtwob}
-%\begin{adjustbox}{max width=0.46\textwidth}
-%\begin{tikzpicture}[baseline]
-%\tikzset{level distance=40pt,sibling distance=5pt}
-%\Tree [.{\LARGE CP\textsubscript{1}} [.{\LARGE SpecCP\textsubscript{1}} \edge[roof]; \node(speccp1){\LARGE \textsc{what\textsubscript{i}}}; ] [.{\LARGE $\overline{\textrm{CP\textsubscript{1}}}$} [.{\LARGE C\textsubscript{1}\textdegree} ] [.{\LARGE XP} [.{\LARGE SpecXP} \edge[roof]; \node(specintp){\textcolor{white}{something here}}; ] [.{\LARGE $\overline{\textrm{X}}$} [.{\LARGE X\textdegree } ] [.{\LARGE CP\textsubscript{2}} [.{\LARGE SpecCP\textsubscript{2}} \edge[roof]; \node(speccp2){\LARGE \textcolor{white}{bla}\textit{t}\textsubscript{i}\textcolor{white}{bla}}; ] [.{\LARGE $\overline{\textrm{CP\textsubscript{2}}}$} [.{\LARGE C\textsubscript{1}\textdegree} ] [.{\LARGE IP} \edge[roof]; \node(ip){\LARGE \textsc{paul} $\textrm{\textit{t}}$\textsubscript{i} \textsc{buy}}; ] ] ] ] ] ] ]
-%
-%\draw[semithick,->] (ip.south) to [bend right=-80] node [midway,fill=white] {\LARGE Step 1} (speccp2.south);
-%\draw[semithick,->] (speccp2.south) to [bend right=-80] node [midway,fill=white] {\LARGE Step 3} (speccp1.south);
-%
-%\node (A) at (9.8,-11.0) {};
-%\draw[gray] (9.8,-9.3) circle (2cm);
-%\draw[semithick,->] (A.south) to [bend right=-80] node [midway,fill=white] {Step 2} (specintp.south);
-%\node (text) at (3.2,-12.5) {\Huge \slg[wh]{what paul buy}};
-%
-%\end{tikzpicture}
-%\end{adjustbox}
-%\end{xlist}
-%\end{multicols}
-%\end{exe}
-%
-%\vspace{-0.5cm}
-
-\newpage  
 \noindent Now, we need to account for clause-initial complex \textit{wh}-phrases. Again, this is an easy task, as they are simply base-generated in SpecCP\textsubscript{1}. This is shown in (\ref{ex:firstanalysisacomplex}). Left-branch extraction is shown in (\ref{ex:firstanalysisacomplexb}). Again, partial doubling with complex \textit{wh}-phrases can be seen as a combination of the two processes in (\ref{ex:firstanalysisacomplex}).
 
-
-
-
- 
-
+\clearpage
 
 \begin{exe}
 \ex\label{ex:firstanalysisacomplex}
-% \begin{multicols}{2}
 \begin{xlist}
+\begin{multicols}{2}
 \ex \label{ex:firstanalysisacomplexa}
 \begin{forest}
 for tree={s sep=2.5mm, inner sep=0, l=5mm} %s sep = Breite; l = Höhe
@@ -2863,7 +2704,6 @@ for tree={s sep=2.5mm, inner sep=0, l=5mm} %s sep = Breite; l = Höhe
 \draw[semithick,->] (A.south) to [bend right=-80] node [midway] {} (specintp.south);
 \node (text) at (0.5,-8) {\slg[wh]{which computer paul buy}};
 \end{forest}
-\vspace*{-2cm}
 \ex\label{ex:firstanalysisacomplexb}
 \begin{forest}
 for tree={s sep=2.5mm, inner sep=0, l=5mm} %s sep = Breite; l = Höhe
@@ -2876,61 +2716,16 @@ for tree={s sep=2.5mm, inner sep=0, l=5mm} %s sep = Breite; l = Höhe
 %\node (text) at (2.2,-13.5) {$\overline{\textrm{\textsc{paul computer buy which}}}$};
 \draw[semithick,->] (ip.south) to [bend right=-80] node [midway] {} (speccp2.south);
 \end{forest}
+\end{multicols}
 \end{xlist}
-% \end{multicols}
+
 \end{exe}
 % \vspace*{-1cm}
 
 
-%\begin{exe}
-%\ex\label{ex:firstanalysisacomplex}
-%\begin{multicols}{2}
-%\begin{xlist}
-%\ex \label{ex:firstanalysisacomplexa}
-%\begin{adjustbox}{max width=0.46\textwidth}
-%\begin{tikzpicture}[baseline]
-%\tikzset{level distance=40pt,sibling distance=5pt}
-%\Tree [.{\LARGE CP\textsubscript{1}} [.{\LARGE SpecCP\textsubscript{1}} \edge[roof]; \node(speccp1){\LARGE \textsc{which computer}}; ] [.{\LARGE $\overline{\textrm{CP\textsubscript{1}}}$} [.{\LARGE C\textsubscript{1}\textdegree} ] [.{\LARGE XP} [.{\LARGE SpecXP} \edge[roof]; \node(specintp){\textcolor{white}{something here}}; ] [.{\LARGE $\overline{\textrm{X}}$} [.{\LARGE X\textdegree } ] [.{\LARGE CP\textsubscript{2}} [.{\LARGE SpecCP\textsubscript{2}} \edge[roof]; \node(speccp2){\textcolor{white}{\LARGE \textsc{what\textsubscript{i}}}}; ] [.{\LARGE $\overline{\textrm{CP\textsubscript{2}}}$} [.{\LARGE C\textsubscript{1}\textdegree} ] [.{\LARGE IP} \edge[roof]; \node(ip){\LARGE \textsc{paul} \textsc{buy}}; ] ] ] ] ] ] ]
-%
-%
-%\node (A) at (10.3,-11.0) {};
-%\draw[gray] (10.2,-9.3) circle (1.8cm);
-%\draw[semithick,->] (A.south) to [bend right=-80] node [midway] {} (specintp.south);
-%\node (text) at (2.2,-13) {\Huge \slg[wh]{which computer paul buy}};
-%
-%
-%\end{tikzpicture}
-%\end{adjustbox}
-%\ex\label{ex:firstanalysisacomplexb}
-%\begin{adjustbox}{max width=0.46\textwidth}
-%\begin{tikzpicture}[baseline]
-%\tikzset{level distance=40pt,sibling distance=5pt}
-%\Tree [.{\LARGE CP\textsubscript{1}} [.{\LARGE SpecCP\textsubscript{1}} \edge[roof]; \node(speccp1){\textcolor{white}{\LARGE \textsc{computer}}}; ] [.{\LARGE $\overline{\textrm{CP\textsubscript{1}}}$} [.{\LARGE C\textsubscript{1}\textdegree} ] [.{\LARGE InterP} [.{\LARGE SpecInterP} \edge[roof]; \node(specintp){\textcolor{white}{something here}}; ] [.{\LARGE $\overline{\textrm{Inter}}$} [.{\LARGE Inter\textdegree } ] [.{\LARGE CP\textsubscript{2}} [.{\LARGE SpecCP\textsubscript{2}} \edge[roof]; \node(speccp2){\LARGE \textsc{which\textsubscript{i}}}; ] [.{\LARGE $\overline{\textrm{CP\textsubscript{2}}}$} [.{\LARGE C\textsubscript{1}\textdegree} ] [.{\LARGE IP} \edge[roof]; \node(ip){\LARGE \textsc{paul} $\textrm{\textit{t}}$\textsubscript{t} \textsc{computer buy}}; ] ] ] ] ] ] ]
-%
-%
-%\node (A) at (12.3,-10.9) {};
-%
-%\draw[gray] (12.3,-9.3) ellipse (4cm and 1.8cm); %breite and höhe
-%
-%
-%\draw[semithick,->] (A.south) to [bend right=-80] node [midway] {} (specintp.south);
-%\node (text) at (2.2,-15) {\Huge \slg[wh]{paul computer buy which}};
-%
-%
-%%\node (overlinetext) at (4.68,-13.1) {wh};
-%%\node (text) at (2.2,-13.5) {$\overline{\textrm{\textsc{paul computer buy which}}}$};
-%\draw[semithick,->] (ip.south) to [bend right=-80] node [midway] {} (speccp2.south);
-%
-%
-%\end{tikzpicture}
-%\end{adjustbox}
-%\end{xlist}
-%\end{multicols}
-%\end{exe}
-%
-%
 
-\newpage 
+
+
 \noindent Real doubling of complex \textit{wh}-phrases is also disallowed in the model proposed in (\ref{ex:firstanalysisacomplex}) as there is only one host projection for complex \textit{wh}-phrases. 
 
 As mentioned, there are several drawbacks in this second model as one needs to assume an additional layer of functional structure and additional movement steps that are hard to motivate. It shows, however, that it is possible to model the complex empirical data with this kind of model. On the whole, splitting up the CP following \citet{van2010complex, van2012you} seems to be a promising account for constituent interrogatives in sign languages. 
@@ -3129,7 +2924,7 @@ As in the previous sections, I will begin this section with a discussion of the 
 \subsection{General overview}
 Imperative sentences are sentences that are (typically) used for the communicative function of an order or request, i.e. the speaker/signer wants the addressee to carry out an action. An often cited definition of the prototypical meaning of an imperative is by \citet[212]{schmerling1982imperatives} who characterizes an imperative as ``an attempt to bring about a state of affairs in which the proposition expressed by the imperative is true''. This, however, downplays the importance of the addressee \citep[31]{van2007imperatives}. Although it covers orders, requests, and wishes, it does not say anything about who is addressed and if the attempt is realistic or not. It covers, for example, optatives of the sort \textit{May you live 100 years} that should not be covered by the term imperative. Additionally, this definition would cover promises such as \textit{In the future, I will never go to bed so late!} The missing part of Schmerling's definition is that the one who uses an imperative has the intention that the addressee adds the proposition expressed by the imperative to his/her to-do list in \citeauthor{portner2004semantics}'s (\citeyear{portner2004semantics}) terminology. Summarizing Generative analysis of imperatives, \citet[32]{van2007imperatives} concludes that the core meaning of an imperative is to get the ``addressee to bring about a state of affairs''. 
 
-\newpage 
+%\newpage 
 The prototypical directive is a command \citep[1--2]{aikhenval2010imp} although imperatives can be used for a variety of other directive speech acts as several authors stress. \citet[213]{clark1996using}, for example, notes:
 
 \begin{quote}
@@ -3147,7 +2942,7 @@ The first property of imperative sentences I will elaborate on is that they cros
 \end{exe} 
 
 
-\newpage 
+%\newpage 
 \noindent As a reflexive pronoun like \textit{yourself} in (\ref{bindinga}) always needs to be bound we need to ask what its binder is. The only possibility here is that it is a second person subject referring to the addressee.
 
 The second property of imperatives I briefly want to discuss is the (cross-lingustically stable) minimal verb morphology. Although there is a wide range of languages that employ special inflections to mark imperatives -- even including \is{reduplication}reduplications, as, for example, in Hopi \citep{benett1981} -- there is a strong tendency to use as minimal inflection as possible (just the verb root in the extreme case). \citet[172--173]{sadock1985speech}, for example, report that approximately half of their sample of 23 languages make use of no affixes at all. A related property of imperatives that has been noted to be cross-linguistically stable is the lack of tense-marking (e.g., \citealt{sadock1985speech}).
@@ -3158,7 +2953,7 @@ Thus, there is general agreement on the impoverished syntax of imperatives, but 
 
 The third property I want to discuss briefly is the behavior of negative imperatives. Cross-linguistically there seem to be three strategies. Some languages negate imperatives just as other sentence types, some languages use different negators, and others cannot use imperative verb morphology in negated imperatives. 
 
-\newpage
+%\newpage
 An example of the first class of languages is German. Thus, German negates imperatives in the same way as other sentence types as illustrated in (\ref{negimperativegerman}). 
 
 \begin{exe}
@@ -3200,7 +2995,7 @@ Languages of the second class use different negators in imperatives than in othe
 
 Finally, other languages resort to the strategy of not using an imperative verb morphology in negative imperatives. This strategy is illustrated for Spanish in the examples in (\ref{negimperativespanish}) from \citet[57--58]{van2007imperatives}.
 
-\newpage
+%\newpage
 \begin{exe}
 \ex Spanish \citep[57--58]{van2007imperatives}\label{negimperativespanish}
 \begin{xlist}
